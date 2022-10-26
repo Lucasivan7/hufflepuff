@@ -106,8 +106,12 @@ googleLogin.addEventListener('click',() => {
     // The signed-in user info.
     const user = result.user;
     // ...
-    console.log(user)
+    const user_name = user.name
+    return user_name
   })
+  .then(() => {setTimeout(() => {
+    window.location.href = `http://127.0.0.1:5000/iniciar`})    }
+  ,100)
   .catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
@@ -117,5 +121,11 @@ googleLogin.addEventListener('click',() => {
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
-  });;
+  });
+  
 })
+
+let begin_game = document.getElementById("begingame")
+
+begin_game.addEventListener('click',() => {
+  window.location.href = `http://127.0.0.1:5000/quiz1`})    
