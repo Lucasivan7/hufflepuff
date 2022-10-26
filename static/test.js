@@ -124,8 +124,3 @@ googleLogin.addEventListener('click',() => {
   });
   
 })
-
-let begin_game = document.getElementById("begingame")
-
-begin_game.addEventListener('click',() => {
-  window.location.href = `http://127.0.0.1:5000/quiz1`})    
