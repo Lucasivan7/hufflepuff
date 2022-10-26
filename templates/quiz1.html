@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="h-screen bg-[#B9D3EE]"
+    style="font-family: 'Abhaya Libre', serif"
+  >
+    <div class="flex justify-center">
+      <img src="/static/img/quiz.jpg" class="w-[250px] h-[217px] mt-[56px]" />
+    </div>
+
+    <div>
+      <p class="mx-10 flex justify-center mt-10 text-2xl text-[#387F96]">
+        PREGUNTA
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-y-10 mx-5 pb-10">
+      <button
+        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg"
+        id="btnA"
+      >
+        <p class="mx-8">a-</p>
+      </button>
+      <button
+        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg"
+        id="btnB"
+      >
+        <p class="mx-8">b-</p>
+      </button>
+      <button
+        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg"
+        id="btnC"
+      >
+        <p class="mx-8">c-</p>
+      </button>
+    </div>
+
+    <div>Puntos acumulados <small></small></div>
+  </body>
+</html>
