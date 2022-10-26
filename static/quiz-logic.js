@@ -35,17 +35,30 @@ const chequear_respuesta = (respuesta) => {
 btnA.addEventListener('click', () => {
     respuesta = 'A';
     console.log(respuesta);
-    chequear_respuesta(respuesta)
+    chequear_respuesta(respuesta);
+    setTimeout(() => {
+        window.location.href = `http://127.0.0.1:5000/buscador`;
+        }
+        ,600)
+   
 })
 
 btnB.addEventListener('click', () => {
     respuesta = 'B';
     console.log(respuesta);
-    chequear_respuesta(respuesta)
+    chequear_respuesta(respuesta);
+    setTimeout(() => {
+        window.location.href = `http://127.0.0.1:5000/buscador`;
+        }
+        ,600)
 })
 
 btnC.addEventListener('click', () => {
     respuesta = 'C';
     console.log(respuesta);
-    chequear_respuesta(respuesta)
+    chequear_respuesta(respuesta);
+    setTimeout(() => {
+        window.location.href = `http://127.0.0.1:5000/buscador`;
+        }
+        ,600)
 })
