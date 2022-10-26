@@ -31,27 +31,36 @@
       </p>
     </div>
 
-    <div class="flex flex-col gap-y-10 mx-5 pb-10">
+    <div class="flex flex-col gap-y-10 mx-5 pb-5">
       <button
-        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg"
+        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg cursor-pointer disabled:opacity-50"
         id="btnA"
       >
         <p class="mx-8">a-</p>
       </button>
       <button
-        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg"
+        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg cursor-pointer disabled:opacity-50"
         id="btnB"
       >
         <p class="mx-8">b-</p>
       </button>
       <button
-        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg"
+        class="box-content bg-white h-100px w-128px p-4 border-4 rounded-lg cursor-pointer disabled:opacity-50"
         id="btnC"
       >
         <p class="mx-8">c-</p>
       </button>
     </div>
-
-    <div>Puntos acumulados <small></small></div>
+    <div class="flex justify-center">
+      <div>
+        <p class="text-2xl">
+          Puntos acumulados <small class="text-2xl"></small>
+        </p>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="{{url_for('static', filename='quiz-logic.js')}}"
+    ></script>
   </body>
 </html>

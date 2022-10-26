@@ -2,23 +2,29 @@ const btnA   = document.querySelector('#btnA');
 const btnB = document.querySelector('#btnB');
 const btnC   = document.querySelector('#btnC');
 
-const puntosHTML = document.querySelectorAll('small');
-puntosHTML.innerText  = 0;
-
+let puntosHTML = document.querySelectorAll('small');
+puntosHTML[0].innerText  = 0;
+let respuesta = "A"
+let puntosacumulados = 0;
 
 const chequear_respuesta = (respuesta) => {
-    const respuestacorrectaA = 'A';
+    const respuestacorrecta = 'A';
+    console.log(respuesta===respuestacorrecta);
+    // puntosacumulados    
+    if (respuesta===respuestacorrecta){
+        puntosacumulados += 100;
+        puntosHTML[0].innerText = puntosacumulados;
+        btnA.className = `box-content bg-green-700 h-100px w-128px p-4 border-4 rounded-lg disabled:opacity-50`
 
-    // puntosacumulado    
-    if (respuesta==respuestacorrectaA){
-        puntosacumulados += 500;
+    } else if (respuesta==='B'){
+        let btn = document.querySelector(`#btnB`);
+        btn.className = `box-content bg-red-700 h-100px w-128px p-4 border-4 rounded-lg disabled:opacity-50`
+        btnA.className = `box-content bg-green-700 opacity-50 h-100px w-128px p-4 border-4 rounded-lg disabled:opacity-50`
+    } else if (respuesta==='C'){
+        let btn = document.querySelector(`#btnC`);
+        btn.className = `box-content bg-red-700 h-100px w-128px p-4 border-4 rounded-lg disabled:opacity-50`
+        btnA.className = `box-content bg-green-700 opacity-50 h-100px w-128px p-4 border-4 rounded-lg disabled:opacity-50`
 
-        btnA.className = `box-content bg-green-700 h-100px w-128px p-4 border-4 rounded-lg`
-
-    } else{
-        let btn = document.querySelector(`#btn${respuesta}`);
-        btn.className = `box-content bg-red-700 h-100px w-128px p-4 border-4 rounded-lg`
-        btnA.className = `box-content bg-green-700 opacity-50 h-100px w-128px p-4 border-4 rounded-lg`
     }
     btnA.disabled   = true;
     btnB.disabled = true;
@@ -27,16 +33,19 @@ const chequear_respuesta = (respuesta) => {
 
 
 btnA.addEventListener('click', () => {
-    respuesta = 'A'
+    respuesta = 'A';
+    console.log(respuesta);
     chequear_respuesta(respuesta)
 })
 
 btnB.addEventListener('click', () => {
-    respuesta = 'B'
+    respuesta = 'B';
+    console.log(respuesta);
     chequear_respuesta(respuesta)
 })
 
-btnB.addEventListener('click', () => {
-    respuesta = 'C'
+btnC.addEventListener('click', () => {
+    respuesta = 'C';
+    console.log(respuesta);
     chequear_respuesta(respuesta)
 })
